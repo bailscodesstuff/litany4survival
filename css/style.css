@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Diatype';
+    src: url('../fonts/Diatype_Variable.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Monaco', monospace;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+
+nav {
+  margin-bottom: 4rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+}
+
+
+.work {
+    display: grid;
+    grid-template-columns: 500px 300px;
+    gap: 4rem;
+
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 3rem; */
+}
+
+.images img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .work {
+        grid-template-columns: 1fr;
+    }
+}
