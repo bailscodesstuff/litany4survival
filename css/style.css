@@ -82,3 +82,16 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+
+.shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.section-title {
+    margin-top: 16px;
+    font-weight: bold;
+}
