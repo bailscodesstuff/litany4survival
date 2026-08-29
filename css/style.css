@@ -5,17 +5,107 @@
     font-style: normal;
 }
 
-body {
-  font-family: 'Monaco', monospace;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+    box-sizing: border-box;
 }
 
-iframe {
-    display: block;
-    margin-top: 20px;
+/* =========================
+   PAGE
+   ========================= */
+
+html,
+body {
+    background-color: rgb(172, 126, 126);
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
+body {
+    font-family: 'Monaco', monospace;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* =========================
+   NAV + SOCIAL ICONS BOX
+   ========================= */
+
+.header-content {
+    position: relative;
+    z-index: 1;
+
+    background: rgba(172, 126, 126, 0.65);
+
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* NAV TEXT */
+
+.header-content nav a,
+.header-content nav a:visited,
+.header-content nav a:hover,
+.header-content nav a:active {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* OPTIONAL: subtle hover effect */
+
+.header-content nav a:hover {
+    opacity: 0.6;
+}
+
+/* NAV LINKS */
+
+.header-content nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+
+
+/* SOCIAL / SVG ICONS */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+
+/* =========================
+   MAIN WORK BOX
+   ========================= */
+
+.main {
+    position: relative;
+    z-index: 1;
+
+    background: rgba(172, 126, 126, 0.65);
+
+    padding: 2rem;
+}
+
+
+/* =========================
+   VIDEO
+   ========================= */
 
 .video-container {
     position: relative;
@@ -24,63 +114,65 @@ iframe {
     margin: 0 auto;
 }
 
-.video-container iframe {
+.video-container video {
+    display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
     height: auto;
 }
 
-nav {
-  margin-bottom: 2rem;
+#sound-toggle {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+    background: none;
+    border: none;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+.video-text {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    white-space: pre-line;
+}
+
+/* =========================
+   OTHER CONTENT
+   ========================= */
+
+.centered-thing {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .gallery img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
-
-
-#mobile-chat-link {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    #chatango-container {
-        display: none;
-    }
-
-    #mobile-chat-link {
-        display: block;
-    }
-}
-
-
 
 .work {
     display: grid;
     grid-template-columns: 500px 300px;
     gap: 4rem;
-
-    /* grid-template-columns: 1fr 1fr; */
-    /* gap: 3rem; */
 }
 
 .images img {
     width: 100%;
     display: block;
     margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-    .work {
-        grid-template-columns: 1fr;
-    }
 }
 
 .shows-list {
@@ -95,4 +187,169 @@ nav {
 .section-title {
     margin-top: 16px;
     font-weight: bold;
+}
+
+
+/* =========================
+   CHAT
+   ========================= */
+
+#mobile-chat-link {
+    display: none;
+}
+
+
+/* =========================
+   BACKGROUND IMAGE GRID
+   ========================= */
+
+#background {
+    position: fixed;
+    inset: -2px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 180px;
+
+    gap: 0;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+#background img {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+
+    margin: -1px;
+
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   TABLET / MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Chat */
+
+    #chatango-container {
+        display: none;
+    }
+
+    #mobile-chat-link {
+        display: block;
+    }
+
+
+    /* Work */
+
+    .work {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Header */
+
+    .header-content {
+        align-items: flex-start;
+    }
+
+
+    /* Stack navigation links */
+
+    .header-content nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+
+    /* Keep SVG icons in a horizontal row */
+
+    .social-icons {
+        align-self: flex-start;
+        margin-top: 5px;
+    }
+
+}
+
+
+.listen-popup {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.listen-box {
+    position: relative;
+
+    background: rgba(172, 126, 126, 0.95);
+
+    padding: 3rem 4rem;
+
+    text-align: center;
+}
+
+
+/* LISTEN BUTTON */
+
+#listen-button {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#listen-button:hover {
+    opacity: 0.6;
+}
+
+
+/* MUSIC OPTIONS */
+
+#listen-options {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#listen-options a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#listen-options a:hover {
+    opacity: 0.6;
+}
+
+
+/* CLOSE BUTTON */
+
+#close-listen {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+
+    border: none;
+    background: none;
+
+    color: black;
+
+    font-size: 20px;
+    cursor: pointer;
 }

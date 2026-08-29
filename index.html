@@ -3,59 +3,174 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bailee cordice aka blankfacebails</title>
+  <title>blankfacebails</title>
 
-  <meta name="description" content="Bailee Cordice (Blankfacebails) is a poet and performer creating surreal visual worlds, spoken word and music.">
+  <meta name="description"
+    content="Bailee Cordice (Blankfacebails) is a poet and performer creating surreal visual worlds, spoken word and music.">
 
   <meta property="og:title" content="Bailee Cordice aka Blankfacebails">
   <meta property="og:description" content="Poet, performer and artist.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://litany444survival.com/">
+
+
+  <link rel="preload" as="image" href="/images/background-imgs/IMG_2391.jpg">
+  <link rel="preload" as="image" href="/images/background-imgs/IMG_2392.jpg">
+  <link rel="preload" as="image" href="/images/background-imgs/IMG_2394.jpg",>
+  <link rel="preload" as="image" href="/images/background-imgs/5721E5DD-AEF1-4029-B4C1-640D5C1B928A 1.jpg">
+
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <nav>
-    <a href="/">home</a>
-    <a href="/shows">shows</a>
-    <a href="/yap_sesh">yap sesh</a>
-    <!-- <a href="/misc">misc</a> -->
-    <a href="/contact">contact</a>
-  </nav>
+  <div id="background"></div>
 
-  <header>
-    <h1>bailee cordice</h1>
-    <p>aka blankfacebails</p>
-  </header>
+  <div id="listen-popup" class="listen-popup">
 
-  <section class="work">
-    <!-- <div class="images">
-        <img src="images/profile_pic.jpg">
-    </div> -->
+    <div class="listen-box">
 
-    <div class="text">
-      <h2>hello</h2>
-      <p>i am a poet and performer</p> 
-      <p>everything is a work in progress</p>
-      <ul style="list-style-type:none;">
+        <!-- First screen -->
+        <div id="listen-start">
+            <a href="#" id="listen-button">click here</a>
+        </div>
 
-        <!-- <li> music </li> -->
-        <li><a href="https://open.spotify.com/artist/6JQme5S0ktPoLnx3AdoAJP?si=kQ9_BeiPSiOQo-U0yIKgzw">spotify</a></li>
-        <li><a href="https://music.apple.com/gb/artist/blankfacebails/1787563768">apple music</a></li>
-        <li><a href="https://www.youtube.com/@blankfacebails">youtube</a></li>
-        <li><a href="https://soundcloud.com/blankfacebails">soundcloud</a></li>
-     
+        <!-- Music choices -->
+        <div id="listen-options">
 
-      </ul>
+            <a href="https://open.spotify.com/track/4ouwzS3L7On2nPKj6BKAZr?si=18dc8278fbbd4102"
+               target="_blank"
+               rel="noopener noreferrer">
+                spotify
+            </a>
+
+            <a href="https://music.apple.com/gb/album/outside-feat-ralph-hardy/6805573968?i=6805573971"
+               target="_blank"
+               rel="noopener noreferrer">
+                apple music
+            </a>
+
+            <a href="https://blankfacebails.bandcamp.com/track/outside-ft-ralph-hardy"
+               target="_blank"
+               rel="noopener noreferrer">
+                bandcamp
+            </a>
+
+        </div>
+
+        <button id="close-listen" aria-label="Close">×</button>
 
     </div>
 
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/ZPTt9BP0UnM" frameborder="0" allowfullscreen>
-      </iframe>
+</div>
+
+  <section class="header-content">
+    <script id="replace_with_navbar" src="nav.js"></script>
+
+    <div class="social-icons">
+
+      <a href="https://open.spotify.com/artist/6JQme5S0ktPoLnx3AdoAJP" target="_blank" rel="noopener noreferrer">
+        <img src="images/spotify.svg" alt="Spotify" width="40">
+      </a>
+
+      <a href="https://music.apple.com/gb/artist/blankfacebails/1787563768" target="_blank" rel="noopener noreferrer">
+        <img src="images/apple.svg" alt="Apple Music" width="40">
+      </a>
+
+      <a href="https://blankfacebails.bandcamp.com/music" target="_blank" rel="noopener noreferrer">
+        <img src="images/bandcamp-brands-solid-full.svg" alt="Bandcamp" width="40">
+      </a>
+
+      <a href="https://soundcloud.com/blankfacebails" target="_blank" rel="noopener noreferrer">
+        <img src="images/soundcloud.svg" alt="SoundCloud" width="40">
+      </a>
+
+      <a href="https://www.youtube.com/@blankfacebails" target="_blank" rel="noopener noreferrer">
+        <img src="images/youtube.svg" alt="YouTube" width="40">
+      </a>
+
     </div>
   </section>
+
+
+  <main class="main">
+
+    <!-- <section class="work">
+
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/u0zj6rtbHNI?si=7fSKdxigu7K-wVaI"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+
+    </section> -->
+
+    <!-- <h1>blankfacebails</h1> -->
+
+    <div class="video-container">
+
+      <video id="site-video" autoplay muted loop playsinline preload="auto">
+
+        <source src="/videos/we have lots to lose.MOV" type="video/mp4">
+
+        Your browser does not support HTML video.
+      </video>
+
+      <button id="sound-toggle" aria-label="Turn sound on">
+        🔇
+      </button>
+
+    </div>
+
+   
+
+  </main>
+
+
+  <script src="bkg-script.js"></script>
+
+
+  <script>
+    const listenButton = document.getElementById("listen-button");
+    const listenStart = document.getElementById("listen-start");
+    const listenOptions = document.getElementById("listen-options");
+    const closeListen = document.getElementById("close-listen");
+    const listenPopup = document.getElementById("listen-popup");
+
+    listenButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        listenStart.style.display = "none";
+        listenOptions.style.display = "flex";
+    });
+
+    closeListen.addEventListener("click", () => {
+        listenPopup.style.display = "none";
+    });
+</script>
+
+  <script>
+    const video = document.getElementById("site-video");
+    const soundButton = document.getElementById("sound-toggle");
+
+    soundButton.addEventListener("click", () => {
+
+      video.muted = !video.muted;
+
+      if (video.muted) {
+        soundButton.textContent = "🔇";
+        soundButton.setAttribute("aria-label", "Turn sound on");
+      } else {
+        soundButton.textContent = "🔊";
+        soundButton.setAttribute("aria-label", "Turn sound off");
+      }
+
+    });
+  </script>
+
+
 
 
 </body>
