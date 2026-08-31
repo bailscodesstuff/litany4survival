@@ -362,22 +362,23 @@ body {
        BACKGROUND
        ========================= */
 
+
     #background {
-        position: fixed;
-        inset: -2px;
+    position: fixed;
+    inset: -2px;
 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 50vw;
 
-        gap: 0;
+    gap: 0;
 
-        overflow: hidden;
+    overflow: hidden;
 
-        z-index: 0;
+    z-index: 0;
 
-        pointer-events: none;
-    }
+    pointer-events: none;
+}
 }
 
 .listen-popup {
