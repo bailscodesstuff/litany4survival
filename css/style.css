@@ -103,9 +103,35 @@ body {
 }
 
 
+
 /* =========================
    VIDEO
    ========================= */
+
+
+/* puts videos side by side */
+/* .videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    width: 100%;
+} */
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+.video-item {
+    width: 100%;
+}
+
+/* .video-container {
+    width: 100%;
+} */
 
 .video-container {
     position: relative;
@@ -119,6 +145,29 @@ body {
     width: 100%;
     height: auto;
 }
+
+.video-container iframe {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+
+    border: 0;
+}
+
+.video-text {
+    margin-top: 1rem;
+    padding: 1rem;
+
+    background: rgba(172, 126, 126, 0.40);
+}
+
+.video-text p {
+    margin: 0;
+    white-space: pre-line;
+}
+
 
 #sound-toggle {
     position: absolute;
@@ -237,7 +286,9 @@ body {
 
 @media (max-width: 768px) {
 
-    /* Chat */
+    /* =========================
+       CHAT
+       ========================= */
 
     #chatango-container {
         display: none;
@@ -248,21 +299,13 @@ body {
     }
 
 
-    /* Work */
-
-    .work {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* Header */
+    /* =========================
+       HEADER
+       ========================= */
 
     .header-content {
         align-items: flex-start;
     }
-
-
-    /* Stack navigation links */
 
     .header-content nav {
         flex-direction: column;
@@ -270,16 +313,55 @@ body {
         gap: 10px;
     }
 
-
-    /* Keep SVG icons in a horizontal row */
-
     .social-icons {
         align-self: flex-start;
         margin-top: 5px;
     }
 
 
-    /* background when on mobile should be smaller */
+    /* =========================
+       WORK
+       ========================= */
+
+    .work {
+        width: 100%;
+    }
+
+    .video-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .video-item {
+        width: 100%;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .video-container iframe {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .video-text {
+        width: 100%;
+        padding: 0.02rem 1rem;
+    }
+
+
+    /* =========================
+       BACKGROUND
+       ========================= */
+
     #background {
         position: fixed;
         inset: -2px;
@@ -296,9 +378,7 @@ body {
 
         pointer-events: none;
     }
-
 }
-
 
 .listen-popup {
     position: fixed;
@@ -372,3 +452,6 @@ body {
     font-size: 20px;
     cursor: pointer;
 }
+
+
+/* iframe settings */
