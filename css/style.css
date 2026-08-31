@@ -278,6 +278,25 @@ body {
         margin-top: 5px;
     }
 
+
+    /* background when on mobile should be smaller */
+    #background {
+        position: fixed;
+        inset: -2px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+
+        gap: 0;
+
+        overflow: hidden;
+
+        z-index: 0;
+
+        pointer-events: none;
+    }
+
 }
 
 
