@@ -270,10 +270,12 @@ body {
 }
 
 #background img {
-    width: calc(100% + 2px);
+
+    /* uncomment below after testing */
+    /* width: calc(100% + 2px);
     height: calc(100% + 2px);
 
-    margin: -1px;
+    margin: -1px; */
 
     object-fit: cover;
     display: block;
@@ -363,7 +365,7 @@ body {
        ========================= */
 
 
-    #background {
+    /* /* #background {
     position: fixed;
     inset: -2px;
 
@@ -378,7 +380,34 @@ body {
     z-index: 0;
 
     pointer-events: none;
-}
+} */
+    
+    #background {
+        position: fixed;
+        inset: 0;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        /* Match the original image ratio */
+        grid-auto-rows: 32vw;
+
+        gap: 0;
+
+        overflow: hidden;
+
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    #background img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+        display: block;
+    }
+
+
 }
 
 .listen-popup {
