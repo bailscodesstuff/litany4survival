@@ -270,12 +270,10 @@ body {
 }
 
 #background img {
-
-    /* uncomment below after testing */
-    /* width: calc(100% + 2px);
+    width: calc(100% + 2px);
     height: calc(100% + 2px);
 
-    margin: -1px; */
+    margin: -1px;
 
     object-fit: cover;
     display: block;
