@@ -472,6 +472,11 @@ width: 100%;
 }
 
 
+#mobile-chat-container {
+    display: none;
+}
+
+
 /* =========================
    TABLET / MOBILE
    ========================= */
@@ -482,13 +487,28 @@ width: 100%;
        CHAT
        ===================== */
 
-    #chatango-container {
+    /* #chatango-container {
         display: none;
     }
 
     #mobile-chat-link {
         display: block;
+    } */
+
+     /* Show mobile chat */
+    #mobile-chat-container {
+        display: block;
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
     }
+
+    #mobile-chat-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
 
 
     .social-icons {
