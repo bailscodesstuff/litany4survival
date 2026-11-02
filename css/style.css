@@ -379,6 +379,16 @@ width: 100%;
 }
 
 
+#mobile-chat-container {
+    display: none;
+}
+
+#desktop-chat-container {
+    width: 761px;
+    height: 398px;
+}
+
+
 /* =========================
    LISTEN POPUP
    ========================= */
@@ -472,9 +482,6 @@ width: 100%;
 }
 
 
-#mobile-chat-container {
-    display: none;
-}
 
 
 /* =========================
@@ -495,6 +502,10 @@ width: 100%;
         display: block;
     } */
 
+
+    #desktop-chat-container {
+        display: none;
+    }
      /* Show mobile chat */
     #mobile-chat-container {
         display: block;
